@@ -3,7 +3,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Contacts } from '../../api/contact/Contacts';
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Contacts', function publish() {
+Meteor.publish('Contact', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Contacts.find({ owner: username });

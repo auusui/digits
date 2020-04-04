@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Link } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -19,6 +19,9 @@ export class Contact extends React.Component {
             <Card.Description>
               {this.props.contact.description}
             </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <Link to={`/edit/${this.props.contact._id}`}>Edit</Link>
           </Card.Content>
         </Card>
     );

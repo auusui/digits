@@ -10,7 +10,7 @@ function addContact(data) {
 
 /** Initialize the collection if empty. */
 if (Contacts.find().count() === 0) {
-  if (Meteor.settings.defaultContact) {
+  if (Meteor.settings.defaultContacts) {
     console.log('Creating contact data.');
     Meteor.settings.defaultContacts.map(data => addContact(data));
   }

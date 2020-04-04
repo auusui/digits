@@ -1,10 +1,11 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import ContactAdmin from '/imports/ui/components/ContactAdmin';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Contacts } from '../../api/contact/Contacts';
-import ContactAdmin from '/imports/ui/components/ContactAdmin';
+
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListContactsAdmin extends React.Component {

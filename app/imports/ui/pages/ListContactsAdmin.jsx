@@ -21,7 +21,7 @@ class ListContactsAdmin extends React.Component {
         <Container>
           <Header as="h2" textAlign="center" inverted>List Contacts (Admin)</Header>
           <Card.Group>
-            {this.props.contacts.map((contact, index) => <ContactAdmin key={index} contact={contact}/>)}
+            {this.props.contact.map((contact, index) => <ContactAdmin key={index} contact={contact}/>)}
           </Card.Group>
         </Container>
     );
@@ -30,7 +30,7 @@ class ListContactsAdmin extends React.Component {
 
 /** Require an array of Stuff documents in the props. */
 ListContactsAdmin.propTypes = {
-  contacts: PropTypes.array.isRequired,
+  contact: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -39,7 +39,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('ContactsAdmin');
   return {
-    contacts: Contacts.find({}).fetch(),
+    contact: Contacts.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(ListContactsAdmin);

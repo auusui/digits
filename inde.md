@@ -24,6 +24,7 @@ If you do not have an account or would like to make a new one, clicking on the L
 #### Landing (after Login) page, non-Admin user
 
 Once you log in (either to an existing account or by creating a new one), the top menu shows more option tabs:
+
 <img src="doc/user-landing.png">
 
 You can now add new COntact documents, and list the Contacts you have created. Note you cannot see any Contacts created by other users.
@@ -52,11 +53,13 @@ If you accidentally see you have made a mistake, then you can press the edit opt
 #### Landing (after Login), Admin user
 
 If you want to add an extra "admin" user, you can do so in the settings.json file. This user, after logging in, gets a special entry in the navbar:
+
 <img src="doc/admin-landing.png">
 
 #### Admin page (list all users contacts)
 
 The admin page will have the same exact properties, but it will have one extra tab called "admin".  This tab will show all contacts in the system and will show who the owner is as shown:
+
 <img src="doc/admin.png">
 
 Note that non-admin users cannot get to this page, even if they type in the URL by hand.

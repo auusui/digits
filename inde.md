@@ -5,10 +5,8 @@ To view this application, you must first [install meteor](https://www.meteor.com
 Then type $meteor npm install.  Once that is finished, type $meteor npm run start.  Once this is done running, your application should run on the website http://localhost:3000.
 
 ## Walkthrough
-The first page is the Landing page as shown in the picture above.  This is an introductory page that tells you what you need to know about the application you are signing up for.  
-Should you choose to create an account or login, it will then take you to the home page that looks exactly like the landing page except there will now be option in the top menu.  
-The first tab is "Add Contact".  This will allow you to add a person's information into the database.  To view this contact, you can click on the "List Contacts" tab.  
-  You can also place a side note attached to the contact in the bottom portion of the contact card.  It will show you your note along with a time stamp.
+The first page is the Landing page as shown in the picture above.  This is an introductory page that tells you what you need to know about the application you are signing up for.  The top right corner is the user icon where you can either sign up or sign in.
+  
 
 #### Login page
 
@@ -18,35 +16,37 @@ Clicking on the Login link, then on the Sign In menu item displays this page:
 
 #### Register page
 
-Alternatively, clicking on the Login link, then on the Sign Up menu item displays this page:
+If you do not have an account or would like to make a new one, clicking on the Login link, then on the Sign Up menu item displays this page where you can register:
 
 <img src="doc/register.png">
 
 
 #### Landing (after Login) page, non-Admin user
 
-Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
+Once you log in (either to an existing account or by creating a new one), the top menu shows more option tabs:
 <img src="doc/user-landing.png">
 
-You can now add new Stuff documents, and list the Stuff you have created. Note you cannot see any Stuff created by other users.
+You can now add new COntact documents, and list the Contacts you have created. Note you cannot see any Contacts created by other users.
 
-#### Add Stuff page
-
-After logging in, here is the page that allows you to add new Stuff:
+#### Add Contact page
+This is the first tab on the home page.  This will allow you to add a person's information into the database with the required fields as shown below. 
 
 <img src="doc/add.png">
 
-#### List Stuff page
+#### List Contacts page
 
-After logging in, here is the page that allows you to list all the Stuff you have created:
+Clicking the "List Contacts" tab will show you all of the contacts you have added into your system.
 
 <img src="doc/list.png">
 
-You click the "Edit" link to go to the Edit Stuff page, shown next.
+You click the "Edit" link to go to the Edit Contact page, shown next.
 
-#### Edit Stuff page
+You can also place a side note attached to the contact in the bottom portion of the contact card.  It will show you your note along with a time stamp.
+
+#### Edit Contact page
 
 If you accidentally see you have made a mistake, then you can press the edit option on the contact card. This will take you to the page shown below where you can resubmit your changes.
+
 <img src="doc/edit.png">
 
 #### Landing (after Login), Admin user
@@ -54,7 +54,7 @@ If you accidentally see you have made a mistake, then you can press the edit opt
 If you want to add an extra "admin" user, you can do so in the settings.json file. This user, after logging in, gets a special entry in the navbar:
 <img src="doc/admin-landing.png">
 
-#### Admin page (list all users stuff)
+#### Admin page (list all users contacts)
 
 The admin page will have the same exact properties, but it will have one extra tab called "admin".  This tab will show all contacts in the system and will show who the owner is as shown:
 <img src="doc/admin.png">

@@ -1,6 +1,6 @@
 <img src="doc/landing.png">
 
-To view this application, you must first install meteor into your directory.  Go to your Command Prompt (windows) and cd into your application /app directory.  
+To view this application, you must first [install meteor](https://www.meteor.com/install).  Next, go to your Command Prompt (windows) and cd into your /app directory.  
 Then type $meteor npm install.  Once that is finished, type $meteor npm run start.  Once this is done running, your application should run on the website http://localhost:3000.
 
 The first page is the Landing page as shown in the picture above.  This is an introductory page that tells you what you need to know about the application you are signing up for.  

@@ -14,7 +14,7 @@ export class ContactAdmin extends React.Component {
                 size='mini'
                 src={this.props.contact.image}
             />
-            <Card.Header>{this.props.contact.firstName}{this.props.contact.lastName}</Card.Header>
+            <Card.Header>{this.props.contact.firstName} {this.props.contact.lastName}</Card.Header>
             <Card.Meta>{this.props.contact.address}</Card.Meta>
             <Card.Description>
               {this.props.contact.description}

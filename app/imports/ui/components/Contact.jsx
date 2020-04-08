@@ -1,12 +1,20 @@
 import React from 'react';
-import { Card, Image, Feed } from 'semantic-ui-react';
+import { Card, Image, Feed, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Note from './Note';
 import AddNote from './AddNote';
+import { Contacts } from '../../api/contact/Contacts';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 export class Contact extends React.Component {
+
+  removeItem(docID) {
+    // eslint-disable-next-line no-template-curly-in-string
+    console.log('Item to delete: ${docID}');
+    Contacts.remove(docID);
+  }
+
   render() {
     return (
         <Card>
@@ -32,6 +40,11 @@ export class Contact extends React.Component {
           </Card.Content>
           <Card.Content extra>
             <AddNote owner={this.props.contact.owner} contactId={this.props.contact._id}/>
+          </Card.Content>
+          <Card.Content extra>
+            <Button onClick={() => this.removeItem(this.props.contact._id)}>
+              Delete
+            </Button>
           </Card.Content>
         </Card>
     );

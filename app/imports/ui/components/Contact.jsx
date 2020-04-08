@@ -10,45 +10,48 @@ import { Contacts } from '../../api/contact/Contacts';
 export class Contact extends React.Component {
 
   removeItem(docID) {
-    // eslint-disable-next-line no-template-curly-in-string
-    console.log('Item to delete: ${docID}');
-    Contacts.remove(docID);
-  }
+    /* eslint-disable-next-line */
+    if (confirm("Do you want to delete this contact?") == true) {
+      // eslint-disable-next-line no-template-curly-in-string
+      console.log('Item to delete: ${docID}');
+      Contacts.remove(docID);
+    }
+}
 
-  render() {
-    return (
-        <Card>
-          <Card.Content>
-            <Image
-                floated='right'
-                size='mini'
-                src={this.props.contact.image}
-            />
-            <Card.Header>{this.props.contact.firstName} {this.props.contact.lastName}</Card.Header>
-            <Card.Meta>{this.props.contact.address}</Card.Meta>
-            <Card.Description>
-              {this.props.contact.description}
-            </Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <Link to={`/edit/${this.props.contact._id}`}>Edit</Link>
-          </Card.Content>
-          <Card.Content extra>
-            <Feed>
-              {this.props.notes.map((note, index) => <Note key={index} note={note}/>)}
-            </Feed>
-          </Card.Content>
-          <Card.Content extra>
-            <AddNote owner={this.props.contact.owner} contactId={this.props.contact._id}/>
-          </Card.Content>
-          <Card.Content extra>
-            <Button onClick={() => this.removeItem(this.props.contact._id)}>
-              Delete
-            </Button>
-          </Card.Content>
-        </Card>
-    );
-  }
+render() {
+return (
+    <Card>
+      <Card.Content>
+        <Image
+            floated='right'
+            size='mini'
+            src={this.props.contact.image}
+        />
+        <Card.Header>{this.props.contact.firstName} {this.props.contact.lastName}</Card.Header>
+        <Card.Meta>{this.props.contact.address}</Card.Meta>
+        <Card.Description>
+          {this.props.contact.description}
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <Link to={`/edit/${this.props.contact._id}`}>Edit</Link>
+      </Card.Content>
+      <Card.Content extra>
+        <Feed>
+          {this.props.notes.map((note, index) => <Note key={index} note={note}/>)}
+        </Feed>
+      </Card.Content>
+      <Card.Content extra>
+        <AddNote owner={this.props.contact.owner} contactId={this.props.contact._id}/>
+      </Card.Content>
+      <Card.Content extra>
+        <Button onClick={() => this.removeItem(this.props.contact._id)}>
+          Delete
+        </Button>
+      </Card.Content>
+    </Card>
+);
+}
 }
 
 /** Require a document to be passed to this component. */

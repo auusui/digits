@@ -1,1 +1,10 @@
 
+{
+  "galaxy.meteor.com": {
+     "env": { 
+        mongodb+srv://admin:<password>@cluster0-xkvzx.mongodb.net/test?retryWrites=true&w=majority
+     }
+  },
+  
+  
+}

@@ -2,7 +2,7 @@
 {
   "galaxy.meteor.com": {
      "env": { 
-        "MONGO_URL": "mongodb+srv://admin:<password>@cluster0-xkvzx.mongodb.net/test?retryWrites=true&w=majority"
+        "MONGO_URL": "mongodb+srv://admin:X1zSqjqTjPoL6v15@cluster0-xkvzx.mongodb.net/test?retryWrites=true&w=majority"
      }
   },
   
